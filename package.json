@@ -1,0 +1,15 @@
+{
+  "name": "triangle-engineering-project",
+  "version": "1.0.0",
+  "description": "CNC/VMC Job Card & Order Tracking System for Triangle Engineering",
+  "scripts": {
+    "start": "npm --prefix server start",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "test": "npm --prefix server test",
+    "seed": "npm --prefix server run seed"
+  },
+  "author": "",
+  "license": "ISC"
+}

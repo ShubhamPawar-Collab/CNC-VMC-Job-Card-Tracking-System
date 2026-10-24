@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+:root {
+  --color-page: #F5F4F0;
+  --color-surface: #FFFFFF;
+  --color-border: #E2DFD8;
+  --color-nav: #1F2A37;
+  --color-nav-text: #E8ECF1;
+  --color-text-main: #1C2430;
+  --color-text-secondary: #5B6573;
+  --color-primary: #1F5FA8;
+  --color-primary-hover: #174A85;
+
+  /* Status Badges */
+  --badge-reg-bg: #E6EAF0;
+  --badge-reg-text: #3E4C5E;
+  --badge-assign-bg: #E3EEF9;
+  --badge-assign-text: #1F5FA8;
+  --badge-progress-bg: #FCEFD6;
+  --badge-progress-text: #8A5A00;
+  --badge-insp-bg: #EDE5F5;
+  --badge-insp-text: #5B3D86;
+  --badge-disp-bg: #DDF1E4;
+  --badge-disp-text: #1E6B3A;
+  --badge-comp-bg: #D8EEEC;
+  --badge-comp-text: #17625C;
+  --badge-alert-bg: #FBE1DF;
+  --badge-alert-text: #A32B22;
+}
+
+body {
+  background-color: #F5F4F0;
+  color: #1C2430;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Card / Surface */
+.surface-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2DFD8;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #1F5FA8;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn-primary:hover:not(:disabled) {
+  background-color: #174A85;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #1C2430;
+  border: 1px solid #E2DFD8;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn-secondary:hover:not(:disabled) {
+  background-color: #F5F4F0;
+}
+
+/* Standard Input Styling */
+.input-base {
+  background-color: #FFFFFF;
+  border: 1px solid #E2DFD8;
+  border-radius: 6px;
+  color: #1C2430;
+  font-size: 13px;
+  transition: border-color 0.15s ease-in-out;
+}
+.input-base:focus {
+  outline: none;
+  border-color: #1F5FA8;
+  box-shadow: 0 0 0 1px #1F5FA8;
+}
+
+/* Clean Business Table Styles */
+.table-clean {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+.table-clean thead th {
+  background-color: #F0EEEA;
+  color: #5B6573;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 1px solid #E2DFD8;
+  font-size: 12px;
+}
+.table-clean tbody td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #E2DFD8;
+  color: #1C2430;
+}
+.table-clean tbody tr:hover {
+  background-color: #FAF9F6;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.status-registered {
+  background-color: #E6EAF0;
+  color: #3E4C5E;
+}
+.status-assigned {
+  background-color: #E3EEF9;
+  color: #1F5FA8;
+}
+.status-in-progress {
+  background-color: #FCEFD6;
+  color: #8A5A00;
+}
+.status-inspection {
+  background-color: #EDE5F5;
+  color: #5B3D86;
+}
+.status-dispatched {
+  background-color: #DDF1E4;
+  color: #1E6B3A;
+}
+.status-completed {
+  background-color: #D8EEEC;
+  color: #17625C;
+}
+.status-overdue,
+.status-breakdown {
+  background-color: #FBE1DF;
+  color: #A32B22;
+}
+
+/* Custom Scrollbar (clean light theme) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F4F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5D1C8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B8B3A8;
+}
+
+/* Print Styles for Delivery Challan */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-challan {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 24px;
+    background: white !important;
+    color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .printable-challan * {
+    color: #000000 !important;
+    background: transparent !important;
+    border-color: #333333 !important;
+  }
+}
